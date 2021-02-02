@@ -9,6 +9,11 @@ public class ZeitGui {
     private JPanel mainPanel;
     private JLabel sekunden;
     private JButton stop;
+    private JTextField eingabeStunden;
+    private JTextField eingabeMinuten;
+    private JTextField eingabeSekunden;
+    private JButton bestaetigenButton;
+    private JSpinner spinner1;
 
     public ZeitGui() {
         final int[] tik = {0};
@@ -65,6 +70,15 @@ public class ZeitGui {
                 timer.stop();
             }
         });
+        bestaetigenButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tik[0] = Integer.parseInt(eingabeSekunden.getText());
+                min[0] = Integer.parseInt(eingabeMinuten.getText());
+                h[0] = Integer.parseInt(eingabeStunden.getText());
+
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -74,5 +88,9 @@ public class ZeitGui {
         frame.pack();
         frame.setVisible(true);
 
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

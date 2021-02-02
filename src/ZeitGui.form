@@ -2,26 +2,51 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ZeitGui">
   <grid id="27dc6" binding="mainPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="737" height="359"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-14002404"/>
+      <font name="Mudir MT"/>
+      <foreground color="-7303024"/>
+      <toolTipText value="jaaa"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="f1850" class="javax.swing.JLabel" binding="stunden">
         <constraints/>
         <properties>
+          <background color="-16777216"/>
+          <enabled value="true"/>
+          <foreground color="-16777216"/>
           <text value="00"/>
+          <toolTipText value="stunde"/>
+        </properties>
+      </component>
+      <component id="ea330" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <foreground color="-16777216"/>
+          <text value=":"/>
         </properties>
       </component>
       <component id="72653" class="javax.swing.JLabel" binding="minuten">
         <constraints/>
         <properties>
+          <foreground color="-16777216"/>
           <text value="00"/>
+        </properties>
+      </component>
+      <component id="ffe64" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <foreground color="-16777216"/>
+          <text value=":"/>
         </properties>
       </component>
       <component id="81143" class="javax.swing.JLabel" binding="sekunden">
         <constraints/>
         <properties>
+          <foreground color="-16777216"/>
           <text value="00"/>
         </properties>
       </component>
@@ -36,6 +61,36 @@
         <properties>
           <text value="Stop"/>
         </properties>
+      </component>
+      <component id="1b107" class="javax.swing.JTextField" binding="eingabeStunden">
+        <constraints/>
+        <properties>
+          <columns value="2"/>
+          <font swing-font="ColorChooser.font"/>
+        </properties>
+      </component>
+      <component id="a784d" class="javax.swing.JTextField" binding="eingabeMinuten">
+        <constraints/>
+        <properties>
+          <columns value="2"/>
+        </properties>
+      </component>
+      <component id="19ad9" class="javax.swing.JTextField" binding="eingabeSekunden">
+        <constraints/>
+        <properties>
+          <columns value="2"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="52524" class="javax.swing.JButton" binding="bestaetigenButton">
+        <constraints/>
+        <properties>
+          <text value="Bestätigen"/>
+        </properties>
+      </component>
+      <component id="e9a38" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
+        <constraints/>
+        <properties/>
       </component>
     </children>
   </grid>
