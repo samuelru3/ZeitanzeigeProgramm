@@ -3,17 +3,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ZeitGui {
-    private JButton startstop;
+    private JButton start;
     private JLabel minuten;
     private JLabel stunden;
     private JPanel mainPanel;
     private JLabel sekunden;
+    private JButton stop;
 
     public ZeitGui() {
         final int[] tik = {0};
         final int[] min = {0};
         final int[] h = {0};
-        Timer timer = new Timer(10, new ActionListener() {
+        Timer timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tik[0]++;
@@ -30,17 +31,38 @@ public class ZeitGui {
                         min[0]++;
                     }
                 }
-                sekunden.setText(String.valueOf(tik[0]));
-                minuten.setText(String.valueOf(min[0]));
-                stunden.setText(String.valueOf(h[0]));
+                if(tik[0] <10){
+                    sekunden.setText("0"+ tik[0]);
+                }else {
+                    sekunden.setText(String.valueOf(tik[0]));
+                }
+
+                if(min[0] <10){
+                    minuten.setText("0"+ min[0]);
+                }else {
+                    minuten.setText(String.valueOf(min[0]));
+                }
+
+                if(h[0] <10){
+                    stunden.setText("0"+ h[0]);
+                }else {
+                    stunden.setText(String.valueOf(h[0]));
+                }
+
             }
         });
 
 
-        startstop.addActionListener(new ActionListener() {
+        start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 timer.start();
+            }
+        });
+        stop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                timer.stop();
             }
         });
     }

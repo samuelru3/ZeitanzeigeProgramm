@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ZeitGui">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="mainPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
@@ -9,35 +8,33 @@
     <border type="none"/>
     <children>
       <component id="f1850" class="javax.swing.JLabel" binding="stunden">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
+        <constraints/>
         <properties>
-          <text value=""/>
+          <text value="00"/>
         </properties>
       </component>
       <component id="72653" class="javax.swing.JLabel" binding="minuten">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
+        <constraints/>
         <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="fd255" class="javax.swing.JButton" binding="startstop">
-        <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Button"/>
+          <text value="00"/>
         </properties>
       </component>
       <component id="81143" class="javax.swing.JLabel" binding="sekunden">
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
+        <constraints/>
         <properties>
-          <text value=""/>
+          <text value="00"/>
+        </properties>
+      </component>
+      <component id="fd255" class="javax.swing.JButton" binding="start">
+        <constraints/>
+        <properties>
+          <text value="Start"/>
+        </properties>
+      </component>
+      <component id="af50f" class="javax.swing.JButton" binding="stop">
+        <constraints/>
+        <properties>
+          <text value="Stop"/>
         </properties>
       </component>
     </children>
