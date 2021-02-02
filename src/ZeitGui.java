@@ -11,19 +11,28 @@ public class ZeitGui {
 
     public ZeitGui() {
         final int[] tik = {0};
-        int min = 0;
-        int h = 0;
-        Timer timer = new Timer(1000, new ActionListener() {
+        final int[] min = {0};
+        final int[] h = {0};
+        Timer timer = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tik[0]++;
-                //String sekund = tik;
-                if (tik[0] == 60) {
-
+                if (tik[0] == 59) {
+                    tik[0] = 0;
+                    if (min[0] == 59) {
+                        min[0] = 0;
+                        if (h[0] == 23) {
+                            h[0] = 0;
+                        } else {
+                            h[0]++;
+                        }
+                    } else {
+                        min[0]++;
+                    }
                 }
                 sekunden.setText(String.valueOf(tik[0]));
-                minuten.setText(String.valueOf(min));
-                stunden.setText(String.valueOf(h));
+                minuten.setText(String.valueOf(min[0]));
+                stunden.setText(String.valueOf(h[0]));
             }
         });
 
